@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void LoadServeyQuestions() {
         serverQuestionList = new ArrayList<>();
-        String strUrl = RetrofitClient.BASE_URL;
+        String strUrl = RetrofitClient.BASE_URL+"getSurvey";
         Retrofit retrofit = RetrofitClient.getRetrofitClient();
         ApiInterface api = retrofit.create(ApiInterface.class);
 

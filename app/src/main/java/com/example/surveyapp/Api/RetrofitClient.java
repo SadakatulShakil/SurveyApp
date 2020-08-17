@@ -14,7 +14,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
-    public static final String BASE_URL = "https://example-response.herokuapp.com/getSurvey";
+    public static final String BASE_URL = "https://example-response.herokuapp.com/";
 
     public static Retrofit retrofit;
 

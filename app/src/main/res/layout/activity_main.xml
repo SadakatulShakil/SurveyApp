@@ -167,7 +167,7 @@
             android:layout_height="50dp"
             android:layout_margin="8dp"
             android:overlapAnchor="false"
-            android:prompt="Select Product Type"
+            android:prompt="@string/string"
             android:spinnerMode="dropdown"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
