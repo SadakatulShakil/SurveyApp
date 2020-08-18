@@ -1,4 +1,4 @@
-package com.example.surveyapp;
+package com.example.surveyapp.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -27,6 +26,7 @@ import com.example.surveyapp.Api.RetrofitClient;
 import com.example.surveyapp.Api.Servey;
 import com.example.surveyapp.Model.Review;
 import com.example.surveyapp.Model.UserResponse;
+import com.example.surveyapp.R;
 import com.google.gson.Gson;
 
 import org.json.JSONArray;
@@ -36,7 +36,6 @@ import org.json.JSONObject;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 

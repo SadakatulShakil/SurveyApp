@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.surveyapp.Model.UserResponse;
 import com.example.surveyapp.R;
-import com.example.surveyapp.ServeyDetailsActivity;
+import com.example.surveyapp.Activity.ServeyDetailsActivity;
 
 import java.util.ArrayList;
 

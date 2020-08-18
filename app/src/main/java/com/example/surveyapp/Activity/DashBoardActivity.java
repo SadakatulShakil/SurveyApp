@@ -1,4 +1,4 @@
-package com.example.surveyapp;
+package com.example.surveyapp.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,12 +10,12 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.surveyapp.Adapter.ServeyResponseAdapter;
 import com.example.surveyapp.Model.UserResponse;
+import com.example.surveyapp.R;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 

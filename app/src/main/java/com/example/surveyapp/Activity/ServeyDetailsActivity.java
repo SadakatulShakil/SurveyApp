@@ -1,4 +1,4 @@
-package com.example.surveyapp;
+package com.example.surveyapp.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.surveyapp.Model.UserResponse;
+import com.example.surveyapp.R;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 

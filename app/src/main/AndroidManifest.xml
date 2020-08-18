@@ -11,10 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ServeyDetailsActivity"></activity>
-        <activity android:name=".DashBoardActivity" />
-        <activity android:name=".SuccessMessageActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Activity.ServeyDetailsActivity"></activity>
+        <activity android:name=".Activity.DashBoardActivity" />
+        <activity android:name=".Activity.SuccessMessageActivity" />
+        <activity android:name=".Activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
