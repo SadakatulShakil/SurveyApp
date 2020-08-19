@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">SurveyApp</string>
     <string name="string">Select Product Type</string>
+    <string name="survey">Survey</string>
+    <string name="dashboard">Dash-Board</string>
+    <string name="previous">Previous Data</string>
 </resources>

@@ -1,11 +1,13 @@
 package com.example.surveyapp.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -46,6 +48,7 @@ import retrofit2.Retrofit;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Toolbar dToolbar;
     private TextView tvTextQuestion, tvNumberQuestion, tvMultipleChooseQuestion, tvDropDownQuestion, tvCheckboxQuestion;
     private EditText etTextAnswer, etNumberAnswer;
     private RadioGroup rB;
@@ -79,6 +82,8 @@ public class MainActivity extends AppCompatActivity {
         userResponseList = new ArrayList<>();
 
         initView();
+
+        dToolbar.setTitle(getString(R.string.survey));
 
         LoadServeyQuestions();
 
@@ -319,6 +324,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initView() {
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            dToolbar = findViewById(R.id.toolbar);
+        }
         tvTextQuestion = findViewById(R.id.textQuestion);
         tvNumberQuestion = findViewById(R.id.numberQuestion);
         tvMultipleChooseQuestion = findViewById(R.id.multipleQuestion);

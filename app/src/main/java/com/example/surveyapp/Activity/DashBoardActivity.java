@@ -1,12 +1,14 @@
 package com.example.surveyapp.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -26,7 +28,7 @@ import java.util.List;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class DashBoardActivity extends AppCompatActivity {
-
+    private Toolbar dToolbar;
     private TextView textAnswer, numberAnswer, multiAnswer, dropDownAnswer, checkBoxAnswer;
     public static final String TAG = "DashBoard";
     private static final String PREFS_TAG = "SharedPrefs";
@@ -45,6 +47,7 @@ public class DashBoardActivity extends AppCompatActivity {
 
         initView();
 
+        dToolbar.setTitle(getString(R.string.dashboard));
         Intent intent = getIntent();
 
         textAnswer.setText(intent.getStringExtra("textAns"));
@@ -110,7 +113,9 @@ public class DashBoardActivity extends AppCompatActivity {
 
 
     private void initView() {
-
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            dToolbar = findViewById(R.id.toolbar);
+        }
         textAnswer = findViewById(R.id.tvText);
         numberAnswer = findViewById(R.id.tvNumber);
         multiAnswer = findViewById(R.id.tvModeType);

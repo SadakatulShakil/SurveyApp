@@ -1,8 +1,10 @@
 package com.example.surveyapp.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -13,7 +15,7 @@ import com.example.surveyapp.R;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ServeyDetailsActivity extends AppCompatActivity {
-
+    private Toolbar dToolbar;
    private UserResponse userResponse = new UserResponse();
     private TextView textAnswer, numberAnswer, multiAnswer, dropDownAnswer, checkBoxAnswer, tvTime;
     private CircleImageView btDone;
@@ -23,6 +25,8 @@ public class ServeyDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_servey_details);
 
         initView();
+
+        dToolbar.setTitle(getString(R.string.previous));
         Intent intent = getIntent();
         userResponse = (UserResponse) intent.getSerializableExtra("responseObject");
 
@@ -45,6 +49,9 @@ public class ServeyDetailsActivity extends AppCompatActivity {
     }
 
     private void initView() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            dToolbar = findViewById(R.id.toolbar);
+        }
         textAnswer = findViewById(R.id.tvText);
         numberAnswer = findViewById(R.id.tvNumber);
         multiAnswer = findViewById(R.id.tvModeType);

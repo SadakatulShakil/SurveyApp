@@ -38,7 +38,7 @@ public class ServeyResponseAdapter extends RecyclerView.Adapter<ServeyResponseAd
         final UserResponse userResponse = aUserResponseList.get(position);
 
         String time = userResponse.getTimeStamp();
-        String phone = userResponse.getuNumberAns();
+        String phone = userResponse.getuTextAns();
 
         holder.tvSubmissionTime.setText(time);
         holder.tvPhone.setText(phone);
